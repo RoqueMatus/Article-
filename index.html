@@ -7,6 +7,8 @@
   
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Heroicons -->
+  <script src="https://unpkg.com/@heroicons/vue/24/solid"></script>
 
   <style>
     /* System font stack (similar to Apple’s SF Pro) */
@@ -89,27 +91,33 @@
         transform: translateY(-50%) scale(0.9);
       }
     }
+
+       /* Reserve space for the scrollbar to avoid horizontal shifting */
+       main {
+      scrollbar-gutter: stable;
+    }
   </style>
 </head>
 
 <body class="bg-white text-gray-900">
-   <!-- Title Block -->
-  <header class="w-full bg-gray-50 py-8 mb-4 border-b border-gray-200">
+  <!-- Title Block -->
+  <header class="w-full bg-gray-50 py-4 lg:py-8 mb-0 border-b border-gray-200">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl font-bold leading-tight text-gray-900">
+      <h1 class="text-xl md:text-3xl font-bold leading-tight text-gray-900">
         Investigative Report on Mysterious Deaths
       </h1>
-      <p class="text-gray-600 mt-2">
+      <p class="text-gray-600 mt-2 text-base md:text-lg">
         A closer look at the tragic incident in San Pedro, Belize
       </p>
     </div>
   </header>
-  <div class="max-w-screen-xl mx-auto flex items-start my-12 px-4 sm:px-6 lg:px-8">
+
+  <div class="max-w-screen-xl mx-auto flex items-start my-0 px-4 sm:px-6 lg:px-8">
     <!-- Sidebar: Table of Contents -->
     <aside
-      class="hidden lg:block w-1/4 mr-8 mt-20 p-8 bg-white shadow-md rounded-md border-t border-gray-200 sticky top-24"
+      class="hidden lg:block w-1/4 mr-8 mt-8 lg:mt-20 p-4 lg:p-8 bg-white shadow-md rounded-md border-t border-gray-200 sticky top-24"
     >
-      <h2 class="text-xl font-semibold mb-4">Table of Contents</h2>
+      <h2 class="text-lg md:text-xl font-semibold mb-4">Table of Contents</h2>
       <nav class="space-y-2">
         <a
           href="#introduction"
@@ -182,13 +190,13 @@
       <!-- 1. Introduction & Background -->
       <section
         id="introduction"
-        class="animate-fadeInUp snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h1 class="text-3xl font-bold leading-tight">
+          <h1 class="text-lg md:text-2xl lg:text-3xl font-bold leading-tight">
             1. Introduction & Background
           </h1>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             On February 22, 2025, three American women—Kaoutar Naqqad (23),
             Imane Mallah (24), and Wafae El-Arar (26)—were discovered dead
             under mysterious circumstances at the Royal Kahal Beach Resort in
@@ -200,7 +208,7 @@
             noted for her extensive education, and their friends described them
             as responsible individuals with a strong moral character.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             The sudden loss of these young women has shocked families, friends,
             and the community. Given their backgrounds and lifestyles, the
             possibility that they might have been involved in heavy partying or
@@ -215,45 +223,45 @@
       <!-- 2. Location & Timeline -->
       <section
         id="location-timeline"
-        class="animate-fadeInUp delay-100 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-100 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             2. Location & Timeline
           </h2>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               2.1 Where & When It Happened
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Location:</strong> Royal Kahal Beach Resort,
               Ambergris Caye, San Pedro Town, Belize
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Date of Discovery:</strong> Saturday, February 22,
               2025 (approximately 11:30 a.m.) as reported by Hotel Manager
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Date of Check-In:</strong> February 19, 2025
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Last Seen Alive:</strong> Thursday evening,
               February 20, 2025 (as captured by resort CCTV)
             </p>
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               2.2 Suite Number Confusion
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Early reports from various media outlets, including Love FM,
               Channel 5 Belize, and Breaking Belize News, stated that the
               victims were found in “Suite 101,” with some outlets referring to
               it as the “Bird of Paradise suite.”
             </p>
-            <blockquote class="pl-4 border-l-4 border-gray-300 italic">
+            <blockquote class="pl-4 border-l-4 border-gray-300 italic text-base md:text-lg">
               “The victims have been confirmed as 24-year-old Imane Mallah,
               26-year-old Wafae El-Arar, and 23-year-old Koutar Naqqad.
               Authorities responded to the scene around 11:40 a.m. on Saturday,
@@ -265,10 +273,10 @@
                 the numbers.
               </span>
             </blockquote>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               However, conflicting details have since emerged:
             </p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Discrepancies in Reported Suite Numbers:</strong>
                 Initial coverage mentioned Suite 101, but some sources suggest
@@ -277,6 +285,17 @@
                 shortly after the resort was built, casting doubt on its
                 availability as a rental unit.
               </li>
+              <!-- Image container replaced with a <figure> for sleeker descriptions -->
+            <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
+              <img
+                src="src/Room 101 not availble, room 102 is only one.PNG"
+                alt="Suite Number Discrepancy"
+                class="w-full h-auto object-contain"
+              />
+              <figcaption class="text-sm text-gray-600 p-2">
+                This image shows an online listing indicating Suite 101 isn’t actually available for rent, raising doubts about official reports.
+              </figcaption>
+            </figure>
               <li>
                 In one instance, a media house even mentioned the number
                 “1001.” These inconsistencies have led to confusion and
@@ -284,7 +303,10 @@
                 public statements.
               </li>
             </ul>
-            <p class="leading-relaxed text-gray-700">
+
+            
+
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Furthermore, it is peculiar that all the media outlets
               appear to report the same details, which raises questions about
               the uniformity of the information being disseminated.
@@ -292,12 +314,12 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               Updated Evidence from Social Media
             </h3>
             <!-- Video Container -->
             <div>
-              <h4 class="font-semibold">TikTok Video Evidence</h4>
+              <h4 class="font-semibold text-base md:text-lg">TikTok Video Evidence</h4>
               <video 
                 class="w-full h-64 bg-gray-200 rounded-lg shadow-md"
                 controls
@@ -306,7 +328,7 @@
                 Your browser does not support the video tag.
               </video>
             </div>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               A crucial now-deleted TikTok video provided explicit evidence
               pointing to Room 102 as the actual location of the incident. In
               this footage, the door identified clearly aligns with the
@@ -318,7 +340,7 @@
             </p>
             <!-- Facebook Video Container -->
             <div>
-              <h4 class="font-semibold">Facebook Video Evidence</h4>
+              <h4 class="font-semibold text-base md:text-lg">Facebook Video Evidence</h4>
               <video 
                 class="w-full h-64 bg-gray-200 rounded-lg shadow-md"
                 controls
@@ -327,7 +349,7 @@
                 Your browser does not support the video tag.
               </video>
             </div>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               A separate Facebook video further supports this contradiction,
               depicting police crime scene tape surrounding both Suites 101 and
               102. Notably, the footage clearly shows the door to Room 102 open,
@@ -335,7 +357,7 @@
               officers are subsequently observed standing near Room 101,
               appearing to shift attention away from Room 102.
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               In the footage, San Pedro Police appear to intentionally
               divert public attention by positioning themselves prominently
               near Room 101, despite clear evidence indicating significant
@@ -344,22 +366,23 @@
             </p>
 
             <!-- Floor Plan 102 Image Container -->
-            <div>
-              <h4 class="font-semibold">Floor Plan 102</h4>
-              <div class="w-full bg-gray-200 rounded-lg shadow-md overflow-hidden">
-                <img
-                  src="src/102_floor_plan.png"
-                  alt="Floor Plan 102"
-                  class="w-full h-auto object-contain"
-                />
-              </div>
-            </div>
-            <p class="leading-relaxed text-gray-700">
+            <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
+              <img
+                src="src/102_floor_plan.png"
+                alt="Floor Plan 102"
+                class="w-full h-auto object-contain"
+              />
+              <figcaption class="text-sm text-gray-600 p-2">
+                Official floor plan of Suite 102, matching social media evidence and contradicting earlier claims that the incident happened in Suite 101.
+              </figcaption>
+            </figure>
+
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Visual Confirmation: Image and layout evidence match precisely
               with Suite 102, reinforcing witness accounts and suggesting
               intentional discrepancies in initial official reports.
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Speculated Rationale:</strong> Concerns have emerged
               regarding possible intentional misreporting of suite numbers by
               hotel management or local authorities. This discrepancy in
@@ -371,7 +394,7 @@
               an incorrect suite, those responsible might have hoped to avoid
               accountability and detailed forensic examination.
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Additionally, potential ties between the hotel's management and
               influential local figures raise significant questions about the
               integrity and transparency of early police statements, suggesting
@@ -385,18 +408,18 @@
       <!-- 3. Incident Context & Location Details -->
       <section
         id="incident-context"
-        class="animate-fadeInUp delay-200 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-200 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             3. Incident Context & Location Details
           </h2>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               3.1 Ambergris Caye & San Pedro
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               San Pedro, located on Ambergris Caye, is one of Belize’s top
               tourist destinations, known for its vibrant nightlife and marine
               attractions. As a popular vacation spot, the town sees thousands
@@ -409,10 +432,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               3.2 The Royal Kahal Beach Resort
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               The resort is owned and managed by Royal Kahal Resort Limited,
               operated by Fairhaven Properties Inc. (a Canadian company led by
               Mike and Wendy Fairbairn). Notably, the resort has an “Approved
@@ -421,19 +444,23 @@
               Minister Johnny Briceño—provides the establishment with tax
               exemptions and other tourism-related benefits.
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Key Building Features Include:</strong>
             </p>
+            
             <!-- Gas-Fired “Instant-On” Water Heater Image -->
-            <div class="w-full bg-gray-200 rounded-lg shadow-md overflow-hidden">
+            <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
               <img
                 src="src/instant-on-gas-heater-it-internet-per-each-suite-1-1536x669.jpg"
                 alt="Gas Water Heater"
                 class="w-full h-auto object-contain"
               />
-            </div>
+              <figcaption class="text-sm text-gray-600 p-2">
+                Promotional image from the resort highlighting tankless “instant-on” gas water heaters in each suite.
+              </figcaption>
+            </figure>
 
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Gas-Fired “Instant-On” Water Heaters:</strong> Each
                 suite is equipped with tankless water heaters. If these
@@ -459,7 +486,7 @@
                 to detect carbon monoxide.
               </li>
             </ul>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               This discrepancy raises serious concerns, as the resort has been
               falsely advertising the presence of CO detectors while only
               having smoke detectors installed. This is not only negligence but
@@ -475,21 +502,22 @@
       <!-- 4. Missing Gas-Fired Heater & Police Cover-Up? -->
       <section
         id="missing-heater"
-        class="animate-fadeInUp delay-300 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-300 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             4. Where is the Missing Gas-Fired Water Heater & Why is the San
             Pedro Police Department Covering It Up?
           </h2>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Why were there no Gas-Fired “Instant-On” Water Heaters reported by
             police, although the hotel announced to the world that they have
             them in every unit? There is also video proof on TikTok, as
             provided, of Gas-Fired “Instant-On” Water Heaters. Additionally,
-            virtual tours of the Royal Kahal Resort show Gas-Fired "Instant-On" in every suite.
+            virtual tours of the Royal Kahal Resort show Gas-Fired "Instant-On"
+            in every suite.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             <strong>Possible Reason for Cover-Up?</strong> Some have
             speculated that local authorities and resort management might be
             reluctant to acknowledge a potential CO hazard because of the
@@ -500,7 +528,7 @@
             addressing such hazards would harm the local economy, thus
             remaining silent.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Belize’s tourism sector is a significant contributor to the
             nation’s GDP, and San Pedro is one of the country’s prime
             destinations. Any suggestion of negligence or cover-up at a
@@ -514,24 +542,24 @@
       <!-- 5. Possible Causes & Contributing Factors -->
       <section
         id="possible-causes"
-        class="animate-fadeInUp delay-400 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-400 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             5. Possible Causes & Contributing Factors
           </h2>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Multiple theories have been put forward regarding the cause of the
             women’s deaths. Each theory presents its own set of potential
             contributing factors and supporting evidence.
           </p>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               5.1 Carbon Monoxide (CO) Poisoning
             </h3>
-            <h4 class="font-semibold">5.1.1 Mechanism of CO Poisoning</h4>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <h4 class="font-semibold text-base md:text-lg">5.1.1 Mechanism of CO Poisoning</h4>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Gas Water Heater Malfunction:</strong> The resort’s
                 tankless water heaters can produce CO if they are not properly
@@ -553,8 +581,8 @@
               </li>
             </ul>
 
-            <h4 class="font-semibold">5.1.2 Supporting Evidence</h4>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <h4 class="font-semibold text-base md:text-lg">5.1.2 Supporting Evidence</h4>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Symptomatology:</strong> Early reports noted
                 frothing at the mouth—often associated with severe poisoning or
@@ -576,10 +604,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               5.2 Drug/Alcohol Overdose Theory
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Another theory presented by local police attributes the deaths to
               a combination of alcohol consumption and edible “gummies.” Early
               police reports mentioned “alcohol and gummies” and later shifted
@@ -590,15 +618,15 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               5.3 Foul Play and Evidence Tampering
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               A third possibility is foul play or deliberate tampering with
               evidence. While no clear signs of forced entry or theft have been
               reported, suspicions arose due to:
             </p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Suspicious Clean-Up Procedures:</strong> Rumors suggest
                 staff or authorities may have attempted to “clean up” the scene
@@ -625,21 +653,21 @@
       <!-- 6. Timeline & Evolving Narratives -->
       <section
         id="timeline"
-        class="animate-fadeInUp delay-500 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-500 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             6. Timeline & Evolving Narratives
           </h2>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Understanding the timeline of events is crucial to assessing
             the competing theories.
           </p>
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               Saturday, February 22, 2025 (Around Noon)
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Discovery of the Victims:</strong> After failing to
               contact the women for approximately 36 hours, resort staff
               unlocked the suite. Early media reports named it “Suite 101,”
@@ -650,10 +678,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               Immediate Aftermath and Official Reports
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Initial Police Reports:</strong> Local law enforcement
                 quickly attributed the deaths to a possible overdose involving
@@ -685,18 +713,18 @@
       <!-- 7. Evidence & Areas of Concern -->
       <section
         id="evidence"
-        class="animate-fadeInUp delay-600 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-600 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             7. Evidence & Areas of Concern
           </h2>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               7.1 Victim Profiles and Background
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               The victims—Kaoutar Naqqad, Imane Mallah, and Wafae
               El-Arar—were devout Muslims and conscientious individuals
               from Revere, Massachusetts. Their trip to Belize was meant as a
@@ -706,10 +734,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               7.2 Direct Evidence
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y=2 text-base md:text-lg">
               <li>
                 <strong>Gas Water Heater:</strong> A critical potential source
                 of CO. Police statements made no reference to it.
@@ -731,14 +759,14 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               7.3 Official Oversight
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Belize Fire Department:</strong> Lacked specialized CO
               testing equipment, leaving key questions unanswered.
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Governmental Influence:</strong> High-ranking officials’
               involvement (e.g., Prime Minister’s signature on the resort’s
               “Approved Enterprise” status) complicates matters. Critics argue
@@ -752,18 +780,18 @@
       <!-- 8. Broader Context & Suspicions of a Cover-Up -->
       <section
         id="broader-context"
-        class="animate-fadeInUp delay-700 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-700 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
-            8. Broader Context & Suspicions of a Cover-Up
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
+            8. Broader Context & Cover-Up Suspicions
           </h2>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               8.1 Tourism-Driven Motives
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Belize’s economy relies heavily on tourism, and a major
               incident at a flagship resort could have severe economic
               repercussions. Local authorities may prefer attributing the deaths
@@ -774,10 +802,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               8.2 Shifting Details & Evidence Tampering
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Changing Symptom Descriptions:</strong> Frothing at the
                 mouth changed to vomiting; references to “snacks/gummies”
@@ -793,15 +821,15 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               8.3 Systemic Weaknesses
             </h3>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Resource Limitations:</strong> Local police and fire
               services lack the specialized resources needed for in-depth CO
               investigations.
             </p>
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Political and Economic Pressures:</strong> With tourism
               as an economic backbone, political interests may supersede a
               thorough, transparent investigation. Connections between resort
@@ -814,22 +842,22 @@
       <!-- 9. Recommended Investigative Actions -->
       <section
         id="recommended-actions"
-        class="animate-fadeInUp delay-800 snap-start border-b border-gray-200 py-20"
+        class="animate-fadeInUp delay-800 snap-start border-b border-gray-200 py-8 lg:py-20"
       >
-        <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">
+        <div class="max-w-3xl mx-auto space-y=6">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">
             9. Recommended Investigative Actions
           </h2>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Given the complexity of the case and the numerous unanswered
             questions, the following actions are recommended:
           </p>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               9.1 Professional CO Testing
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Engage Forensic HVAC Experts:</strong> A specialized
                 external team should inspect the suite’s gas water heater,
@@ -843,10 +871,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               9.2 Toxicology and Autopsy Transparency
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Full Disclosure of Autopsy Reports:</strong> Make
                 findings public, focusing on carboxyhemoglobin levels.
@@ -860,10 +888,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               9.3 Verification of CO Detector Records
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Maintenance and Functionality Review:</strong> Audit
                 all CO detectors to confirm routine upkeep and correct
@@ -877,10 +905,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               9.4 Independent Oversight
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>International Forensic Investigation:</strong> Involve
                 external experts or U.S. authorities for an unbiased review.
@@ -893,10 +921,10 @@
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold leading-tight">
+            <h3 class="text-base md:text-xl font-semibold leading-tight">
               9.5 Clarification of Suite Number and Incident Details
             </h3>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
                 <strong>Public Statement from Resort Management:</strong>
                 Address the discrepancy between Suite 101 and Suite 102.
@@ -914,11 +942,11 @@
       <!-- 10. Conclusion -->
       <section
         id="conclusion"
-        class="animate-fadeInUp delay-900 snap-start py-20"
+        class="animate-fadeInUp delay-900 snap-start py-8 lg:py-20"
       >
         <div class="max-w-3xl mx-auto space-y-6">
-          <h2 class="text-2xl font-semibold leading-tight">10. Conclusion</h2>
-          <p class="leading-relaxed text-gray-700">
+          <h2 class="text-lg md:text-2xl font-semibold leading-tight">10. Conclusion</h2>
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             The tragic deaths of Kaoutar Naqqad, Imane Mallah, and Wafae
             El-Arar have left a community—and an entire nation—demanding
             answers. The initial narrative attributing the fatalities to a drug
@@ -929,7 +957,7 @@
             system create a plausible scenario for CO poisoning, the failure of
             CO detectors to sound an alarm is particularly troubling.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Adding to the complexity is the persistent confusion regarding the
             suite number. While early media reports mentioned Suite 101, social
             media and floor-plan evidence suggest Suite 102 as the true
@@ -939,7 +967,7 @@
             influential political figures and the economic importance of
             Belize’s tourism sector.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             The investigation must pivot toward an independent, thorough
             inquiry into every aspect of the incident. Professional CO testing,
             transparent toxicology reports, and rigorous CO detector audits are
@@ -948,7 +976,7 @@
             that political or economic interests do not overshadow the pursuit
             of justice.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Ultimately, the families of the victims—and the broader public—are
             entitled to an unvarnished account of what transpired. Whether the
             cause of death is confirmed as carbon monoxide poisoning, an
@@ -958,10 +986,10 @@
             and accountability can the trust of both the local community and
             international visitors be restored.
           </p>
-          <p class="leading-relaxed text-gray-700">
+          <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             <em>End of Report</em>
           </p>
-          <p class="text-gray-700 font-semibold">
+          <p class="text-gray-700 font-semibold text-base md:text-lg">
             Authored by 
             <a
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -976,41 +1004,100 @@
     </main>
   </div>
 
-  <!-- IntersectionObserver to highlight active ToC link -->
+  <!-- Navigation Controls -->
+  <div id="section-nav" class="fixed bottom-8 right-8 flex items-center space-x-4 bg-white shadow-lg rounded-full px-4 py-2">
+    <button id="prev-btn" class="text-gray-500 disabled:opacity-50" disabled>
+      &#x25B2;
+    </button>
+    <span id="page-indicator" class="text-gray-800 font-semibold">1 / 10</span>
+    <button id="next-btn" class="text-gray-500">
+      &#x25BC;
+    </button>
+  </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll("section[id]");
+      let currentIndex = 0;
+
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const pageIndicator = document.getElementById("page-indicator");
+
+      // Scroll to a given section index
+      function scrollToSection(index) {
+        if (index >= 0 && index < sections.length) {
+          sections[index].scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (index >= sections.length) {
+          // If user clicks "Next" on the last section, scroll back to the top (header)
+          currentIndex = 0;
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+
+      // Update pagination UI
+      function updatePagination() {
+        // Ensure currentIndex is valid
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex >= sections.length) currentIndex = sections.length - 1;
+
+        pageIndicator.textContent = `${currentIndex + 1} / ${sections.length}`;
+        // "Prev" is disabled if we are at the first section
+        prevBtn.disabled = currentIndex === 0;
+      }
+
+      // Button event listeners
+      prevBtn.addEventListener("click", () => {
+        currentIndex--;
+        scrollToSection(currentIndex);
+        updatePagination();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex++;
+        scrollToSection(currentIndex);
+        updatePagination();
+      });
+
+      // Initial pagination
+      updatePagination();
+
+      // IntersectionObserver to highlight active link AND update currentIndex
       const navLinks = document.querySelectorAll("aside nav a");
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Remove 'active-link' from all links
+              // Highlight the corresponding link in the ToC
               navLinks.forEach((link) => {
                 link.classList.remove("active-link");
               });
-              // Highlight the link for the current section
               const id = entry.target.getAttribute("id");
-              const activeLink = document.querySelector(
-                `aside nav a[href="#${id}"]`
-              );
+              const activeLink = document.querySelector(`aside nav a[href="#${id}"]`);
               if (activeLink) {
                 activeLink.classList.add("active-link");
+              }
+
+              // Also update currentIndex for the nav controls
+              const indexOfSection = Array.from(sections).indexOf(entry.target);
+              if (indexOfSection !== -1) {
+                currentIndex = indexOfSection;
+                updatePagination();
               }
             }
           });
         },
         {
           root: null,
+          // "Activates" a section once ~40% of it enters the viewport.
+          // Adjust as desired.
           rootMargin: "-40% 0px -40% 0px",
-          threshold: 0,
+          threshold: 0
         }
       );
 
-      sections.forEach((section) => {
-        observer.observe(section);
-      });
+      sections.forEach((section) => observer.observe(section));
     });
   </script>
 </body>
