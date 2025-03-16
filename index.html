@@ -92,9 +92,16 @@
       }
     }
 
-       /* Reserve space for the scrollbar to avoid horizontal shifting */
-       main {
+    /* Reserve space for the scrollbar to avoid horizontal shifting */
+    main {
       scrollbar-gutter: stable;
+    }
+
+    /* Expand video when in view on mobile */
+    .video-expanded {
+      width: 100% !important;
+      height: 90vh !important;
+      transition: all 0.5s ease-in-out;
     }
   </style>
 </head>
@@ -115,7 +122,7 @@
   <div class="max-w-screen-xl mx-auto flex items-start my-0 px-4 sm:px-6 lg:px-8">
     <!-- Sidebar: Table of Contents -->
     <aside
-      class="hidden lg:block w-1/4 mr-8 mt-8 lg:mt-20 p-4 lg:p-8 bg-white shadow-md rounded-md border-t border-gray-200 sticky top-24"
+      class="hidden lg:block w-1/4 mr-8 mt-8 lg:mt-8 p-4 lg:p-8 bg-white shadow-md rounded-md border-t border-gray-200 sticky top-24"
     >
       <h2 class="text-lg md:text-xl font-semibold mb-4">Table of Contents</h2>
       <nav class="space-y-2">
@@ -190,11 +197,23 @@
       <!-- 1. Introduction & Background -->
       <section
         id="introduction"
-        class="animate-fadeInUp snap-start border-b border-gray-200 py-8 lg:py-20"
+        class="animate-fadeInUp snap-start border-b border-gray-200 py-8 lg:py-8"
       >
         <div class="max-w-3xl mx-auto space-y-6">
+          <!-- Image Container at the Top -->
+          <figure class="my- bg-gray-200 rounded-lg shadow-md overflow-hidden">
+            <img
+              src="src/victims.avif"
+              alt="Investigative Report Cover Image"
+              class="w-full h-auto object-cover"
+            />
+            <figcaption class="text-sm text-gray-600 p-2 text-center">
+              Investigative Report on Mysterious Deaths at Royal Kahal Beach Resort, Belize.
+            </figcaption>
+          </figure>
+
           <h1 class="text-lg md:text-2xl lg:text-3xl font-bold leading-tight">
-            1. Introduction & Background
+            1. Introduction &amp; Background
           </h1>
           <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             On February 22, 2025, three American women—Kaoutar Naqqad (23),
@@ -227,12 +246,12 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            2. Location & Timeline
+            2. Location &amp; Timeline
           </h2>
 
           <div class="space-y-4">
             <h3 class="text-base md:text-xl font-semibold leading-tight">
-              2.1 Where & When It Happened
+              2.1 Where &amp; When It Happened
             </h3>
             <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Location:</strong> Royal Kahal Beach Resort,
@@ -286,16 +305,16 @@
                 availability as a rental unit.
               </li>
               <!-- Image container replaced with a <figure> for sleeker descriptions -->
-            <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
-              <img
-                src="src/Room 101 not availble, room 102 is only one.PNG"
-                alt="Suite Number Discrepancy"
-                class="w-full h-auto object-contain"
-              />
-              <figcaption class="text-sm text-gray-600 p-2">
-                This image shows an online listing indicating Suite 101 isn’t actually available for rent, raising doubts about official reports.
-              </figcaption>
-            </figure>
+              <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
+                <img
+                  src="src/Room 101 not availble, room 102 is only one.PNG"
+                  alt="Suite Number Discrepancy"
+                  class="w-full h-auto object-contain"
+                />
+                <figcaption class="text-sm text-gray-600 p-2">
+                  This image shows an online listing indicating Suite 101 isn’t actually available for rent, raising doubts about official reports.
+                </figcaption>
+              </figure>
               <li>
                 In one instance, a media house even mentioned the number
                 “1001.” These inconsistencies have led to confusion and
@@ -303,8 +322,6 @@
                 public statements.
               </li>
             </ul>
-
-            
 
             <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               Furthermore, it is peculiar that all the media outlets
@@ -321,6 +338,7 @@
             <div>
               <h4 class="font-semibold text-base md:text-lg">TikTok Video Evidence</h4>
               <video 
+                id="expanding-video"
                 class="w-full h-64 bg-gray-200 rounded-lg shadow-md"
                 controls
               >
@@ -412,12 +430,12 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            3. Incident Context & Location Details
+            3. Incident Context &amp; Location Details
           </h2>
 
           <div class="space-y-4">
             <h3 class="text-base md:text-xl font-semibold leading-tight">
-              3.1 Ambergris Caye & San Pedro
+              3.1 Ambergris Caye &amp; San Pedro
             </h3>
             <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               San Pedro, located on Ambergris Caye, is one of Belize’s top
@@ -506,7 +524,7 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            4. Where is the Missing Gas-Fired Water Heater & Why is the San
+            4. Where is the Missing Gas-Fired Water Heater &amp; Why is the San
             Pedro Police Department Covering It Up?
           </h2>
           <p class="leading-relaxed text-gray-700 text-base md:text-lg">
@@ -546,7 +564,7 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            5. Possible Causes & Contributing Factors
+            5. Possible Causes &amp; Contributing Factors
           </h2>
           <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Multiple theories have been put forward regarding the cause of the
@@ -657,7 +675,7 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            6. Timeline & Evolving Narratives
+            6. Timeline &amp; Evolving Narratives
           </h2>
           <p class="leading-relaxed text-gray-700 text-base md:text-lg">
             Understanding the timeline of events is crucial to assessing
@@ -717,7 +735,7 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            7. Evidence & Areas of Concern
+            7. Evidence &amp; Areas of Concern
           </h2>
 
           <div class="space-y-4">
@@ -751,7 +769,7 @@
                 installed, but no alarm sounded.
               </li>
               <li>
-                <strong>Hotel Management & Local Authorities:</strong> Swiftly
+                <strong>Hotel Management &amp; Local Authorities:</strong> Swiftly
                 labeled the deaths as an overdose, while ignoring
                 infrastructure-based explanations.
               </li>
@@ -784,7 +802,7 @@
       >
         <div class="max-w-3xl mx-auto space-y-6">
           <h2 class="text-lg md:text-2xl font-semibold leading-tight">
-            8. Broader Context & Cover-Up Suspicions
+            8. Broader Context &amp; Cover-Up Suspicions
           </h2>
 
           <div class="space-y-4">
@@ -803,7 +821,7 @@
 
           <div class="space-y-4">
             <h3 class="text-base md:text-xl font-semibold leading-tight">
-              8.2 Shifting Details & Evidence Tampering
+              8.2 Shifting Details &amp; Evidence Tampering
             </h3>
             <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
               <li>
@@ -1016,89 +1034,111 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll("section[id]");
-      let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section[id]");
+  let currentIndex = 0;
 
-      const prevBtn = document.getElementById("prev-btn");
-      const nextBtn = document.getElementById("next-btn");
-      const pageIndicator = document.getElementById("page-indicator");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const pageIndicator = document.getElementById("page-indicator");
 
-      // Scroll to a given section index
-      function scrollToSection(index) {
-        if (index >= 0 && index < sections.length) {
-          sections[index].scrollIntoView({ behavior: "smooth", block: "start" });
-        } else if (index >= sections.length) {
-          // If user clicks "Next" on the last section, scroll back to the top (header)
-          currentIndex = 0;
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      }
+  // Scroll to a given section index
+  function scrollToSection(index) {
+    if (index >= 0 && index < sections.length) {
+      sections[index].scrollIntoView({ behavior: "smooth", block: "start" });
+    } else if (index >= sections.length) {
+      // If user clicks "Next" on the last section, scroll back to the top (header)
+      currentIndex = 0;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
-      // Update pagination UI
-      function updatePagination() {
-        // Ensure currentIndex is valid
-        if (currentIndex < 0) currentIndex = 0;
-        if (currentIndex >= sections.length) currentIndex = sections.length - 1;
+  // Update pagination UI
+  function updatePagination() {
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex >= sections.length) currentIndex = sections.length - 1;
 
-        pageIndicator.textContent = `${currentIndex + 1} / ${sections.length}`;
-        // "Prev" is disabled if we are at the first section
-        prevBtn.disabled = currentIndex === 0;
-      }
+    pageIndicator.textContent = `${currentIndex + 1} / ${sections.length}`;
+    prevBtn.disabled = currentIndex === 0;
+  }
 
-      // Button event listeners
-      prevBtn.addEventListener("click", () => {
-        currentIndex--;
-        scrollToSection(currentIndex);
-        updatePagination();
-      });
+  // Button event listeners
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    if (currentIndex < 0) currentIndex = 0;
+    scrollToSection(currentIndex);
+    updatePagination();
+  });
 
-      nextBtn.addEventListener("click", () => {
-        currentIndex++;
-        scrollToSection(currentIndex);
-        updatePagination();
-      });
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex >= sections.length) {
+      currentIndex = 0; // Loop back to the beginning
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      scrollToSection(currentIndex);
+    }
+    updatePagination();
+  });
 
-      // Initial pagination
-      updatePagination();
+  updatePagination();
 
-      // IntersectionObserver to highlight active link AND update currentIndex
-      const navLinks = document.querySelectorAll("aside nav a");
+  // Table of Contents Navigation - Active Link with Pulsing Effect
+  const navLinks = document.querySelectorAll("aside nav a");
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Highlight the corresponding link in the ToC
-              navLinks.forEach((link) => {
-                link.classList.remove("active-link");
-              });
-              const id = entry.target.getAttribute("id");
-              const activeLink = document.querySelector(`aside nav a[href="#${id}"]`);
-              if (activeLink) {
-                activeLink.classList.add("active-link");
-              }
-
-              // Also update currentIndex for the nav controls
-              const indexOfSection = Array.from(sections).indexOf(entry.target);
-              if (indexOfSection !== -1) {
-                currentIndex = indexOfSection;
-                updatePagination();
-              }
-            }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Remove active class from all links
+          navLinks.forEach((link) => {
+            link.classList.remove("active-link");
           });
-        },
-        {
-          root: null,
-          // "Activates" a section once ~40% of it enters the viewport.
-          // Adjust as desired.
-          rootMargin: "-40% 0px -40% 0px",
-          threshold: 0
-        }
-      );
 
-      sections.forEach((section) => observer.observe(section));
+          // Add active class to the current section link
+          const id = entry.target.getAttribute("id");
+          const activeLink = document.querySelector(`aside nav a[href="#${id}"]`);
+          if (activeLink) {
+            activeLink.classList.add("active-link");
+          }
+
+          // Update the current index for navigation buttons
+          const indexOfSection = Array.from(sections).indexOf(entry.target);
+          if (indexOfSection !== -1) {
+            currentIndex = indexOfSection;
+            updatePagination();
+          }
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0,
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+// Intersection observer for expanding the TikTok video on mobile
+document.addEventListener("DOMContentLoaded", () => {
+  const tiktokVideo = document.getElementById("expanding-video");
+  if (tiktokVideo) {
+    const tiktokObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && window.innerWidth <= 768) {
+          tiktokVideo.classList.add("video-expanded");
+        } else {
+          tiktokVideo.classList.remove("video-expanded");
+        }
+      });
+    }, {
+      threshold: 0.6,
     });
+    tiktokObserver.observe(tiktokVideo);
+  }
+});
   </script>
 </body>
 </html>
