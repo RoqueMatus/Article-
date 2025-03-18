@@ -208,7 +208,7 @@
               class="w-full h-auto object-cover"
             />
             <figcaption class="text-sm text-gray-600 p-2 text-center">
-              Investigative Report on Mysterious Deaths at Royal Kahal Beach Resort, Belize.
+              Wafae Elarar (26 years old), Kaoutar Naqqad (23 years old), Imane Mallah (24 years old) 
             </figcaption>
           </figure>
 
@@ -383,6 +383,32 @@
               carbon monoxide gas contamination.
             </p>
 
+              <!-- Floor Plan 102 Image Container -->
+              <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
+                <img
+                  src="src/Police Officer with Label Cut Down .PNG"
+                  alt="Floor Plan 102"
+                  class="w-full h-auto object-contain"
+                />
+                <figcaption class="text-sm text-gray-600 p-2">
+                  Picture of the 5 Police Officers positioned Near Room 101 to manipulate and stay consistent with their reports
+                  to the media
+                </figcaption>
+              </figure>
+
+
+                  <!-- Floor Plan 102 Image Container -->
+                  <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
+                    <img
+                      src="src/Crime Scene .jpg"
+                      alt="Floor Plan 102"
+                      class="w-full h-auto object-contain"
+                    />
+                    <figcaption class="text-sm text-gray-600 p-2">
+                      Evidence showing Police trying to air out Crime Scene of Carbon Monoxide Gas.
+                    </figcaption>
+                  </figure>
+
             <!-- Floor Plan 102 Image Container -->
             <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
               <img
@@ -462,11 +488,32 @@
               Minister Johnny Briceño—provides the establishment with tax
               exemptions and other tourism-related benefits.
             </p>
+
+            <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden max-w-sm mx-auto">
+              <img
+                src="src/Johnny.PNG"
+                alt="Gas Water Heater"
+                class="w-full h-auto object-contain"
+              />
+              <figcaption class="text-sm text-gray-600 p-2">
+                Image showing Enterprise status given to the Resort by John Briceno 
+              </figcaption>
+            </figure>
+            
             <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               <strong>Key Building Features Include:</strong>
             </p>
             
-            <!-- Gas-Fired “Instant-On” Water Heater Image -->
+      
+
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
+              <li>
+                <strong>Gas-Fired “Instant-On” Water Heaters:</strong> Each
+                suite is equipped with tankless water heaters. If these
+                heaters are poorly vented or experience incomplete
+                combustion, they can produce carbon monoxide (CO).
+              </li>
+                    <!-- Gas-Fired “Instant-On” Water Heater Image -->
             <figure class="my-4 bg-gray-200 rounded-lg shadow-md overflow-hidden">
               <img
                 src="src/instant-on-gas-heater-it-internet-per-each-suite-1-1536x669.jpg"
@@ -477,14 +524,6 @@
                 Promotional image from the resort highlighting tankless “instant-on” gas water heaters in each suite.
               </figcaption>
             </figure>
-
-            <ul class="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
-              <li>
-                <strong>Gas-Fired “Instant-On” Water Heaters:</strong> Each
-                suite is equipped with tankless water heaters. If these
-                heaters are poorly vented or experience incomplete
-                combustion, they can produce carbon monoxide (CO).
-              </li>
               <li>
                 <strong>VRF (Variable Refrigerant Flow) Air
                 Conditioning:</strong> The VRF system is energy efficient but
@@ -492,8 +531,9 @@
                 in fresh air. This design flaw could contribute to the
                 dangerous accumulation of CO if there is a leak.
               </li>
+
               <li>
-                <strong>CO Detectors:</strong> The resort claims that every
+                <strong>CO Detectors Advertised were actually Smoke Detectors:</strong> The resort claims that every
                 suite has an advanced CO detection system installed. However,
                 after extensive review through virtual tours on their website
                 and social media content, it has been revealed that no actual
@@ -503,6 +543,21 @@
                 Photoelectric Smoke Detectors</strong>, which are not designed
                 to detect carbon monoxide.
               </li>
+              <div class="relative w-full">
+                <!-- Image Container -->
+                <div class="relative overflow-hidden rounded-lg shadow-md">
+                  <img id="slider-image" src="src/Smoke Detector Labeled.PNG" alt="Gas Water Heater" class="w-full h-auto object-contain" />
+                </div>
+              
+                <!-- Caption -->
+                <figcaption id="slider-caption" class="text-sm text-gray-600 p-2 text-center">
+                  Promotional image from the resort highlighting tankless “instant-on” gas water heaters in each suite.
+                </figcaption>
+              
+                <!-- Navigation Buttons -->
+                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md">&#10094;</button>
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md">&#10095;</button>
+              </div>
             </ul>
             <p class="leading-relaxed text-gray-700 text-base md:text-lg">
               This discrepancy raises serious concerns, as the resort has been
@@ -1114,31 +1169,47 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       root: null,
       rootMargin: "-40% 0px -40% 0px",
-      threshold: 0,
+      threshold: 0,  
     }
   );
 
   sections.forEach((section) => observer.observe(section));
 });
 
-// Intersection observer for expanding the TikTok video on mobile
-document.addEventListener("DOMContentLoaded", () => {
-  const tiktokVideo = document.getElementById("expanding-video");
-  if (tiktokVideo) {
-    const tiktokObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && window.innerWidth <= 768) {
-          tiktokVideo.classList.add("video-expanded");
-        } else {
-          tiktokVideo.classList.remove("video-expanded");
-        }
-      });
-    }, {
-      threshold: 0.6,
-    });
-    tiktokObserver.observe(tiktokVideo);
+
+
+// Slider
+const slides = [
+    {
+      src: "src/Smoke Detector Labeled.PNG",
+      caption: "Promotional image from the resort highlighting tankless 'instant-on' gas water heaters in each suite."
+    },
+    {
+      src: "src/6 Inch Smoke Detector.PNG",
+      caption: "Measuring Smoke Detector Diameter to Confirm its the Correct Model."
+    },
+    {
+      src: "src/Smoke Detector Poorly Placed above Bed in Bedroom of Room 102.PNG",
+      caption: "Smoke Detector Poorly Placed above Bed in Bedroom of Room 201."
+    }
+  ];
+
+  let currentSlide = 0;
+
+  function updateSlide() {
+    document.getElementById("slider-image").src = slides[currentSlide].src;
+    document.getElementById("slider-caption").textContent = slides[currentSlide].caption;
   }
-});
+
+  document.getElementById("prev").addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlide();
+  });
   </script>
 </body>
 </html>
